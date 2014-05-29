@@ -1,23 +1,44 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+  <h1>UpDog</h1>
+
+  <p>What's UpDog?</p>
+  <p>An online chat program.<p>
 
   <table>
     <tr>
-      <th>File Description</th>
-      <th>File Location</th>
+      <th>Login</th>
+      <th></th>
     </tr>
     <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
+      <td>Login:</td>
+      <td><input type="text" name="login[username]"></td>
     </tr>
     <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
+      <td>Password:</td>
+      <td><input type="password" name="login[password]"</td>
     </tr>
     <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
+      <td></td>
+      <td><input type="submit" value="Submit"</td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <th>Signup</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Login:</td>
+      <td><input type="text" name="signup[username]"></td>
+    </tr>
+    <tr>
+      <td>Password:</td>
+      <td><input type="password" name="signup[password]"</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input type="submit" value="Submit"</td>
     </tr>
   </table>
 </div>
