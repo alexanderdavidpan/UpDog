@@ -1,18 +1,14 @@
 <h2>Chat</h2>
 <div id="chat_ui">
   <div id="friends_list">
-    <ul>
-      <li>Bev</li>
-      <li>Tuan</li>
-      <li>Simon</li>
-      <li>Pei</li>
-      <li>Nirav</li>
-      <li>Siyan</li>
-      <li>Zach</li>
-    </ul>
+    <h4>Friends</h4>
+    <hr>
+    <% @users.each do |user| %>
+      <div><%= user.username %></div>
+    <% end %>
   </div>
   <div id="chat_window">
-    <div class="bubbleleft"><p class="user1">Hi!</p></div>
-    <div class="bubbleright"><p class="user2">Hey!</p></div>
+    <p class="user1">Hi!</p>
+    <p class="user2">Hey!</p>
   </div>
 </div>
