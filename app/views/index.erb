@@ -4,45 +4,6 @@
 <p>What's UpDog?</p>
 <p>An online chat program.<p>
 
-  <table>
-    <tr>
-      <th>Login</th>
-      <th></th>
-    </tr>
-    <tr>
-      <td>Login:</td>
-      <td><input type="text" name="login[username]"></td>
-    </tr>
-    <tr>
-      <td>Password:</td>
-      <td><input type="password" name="login[password]"</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><input class="submit" type="submit" value="Submit"</td>
-    </tr>
-  </table>
-
-  <table>
-    <tr>
-      <th>Signup</th>
-      <th></th>
-    </tr>
-    <tr>
-      <td>Username:</td>
-      <td><input type="text" name="signup[username]"></td>
-    </tr>
-    <tr>
-      <td>Password:</td>
-      <td><input type="password" name="signup[password]"</td>
-    </tr>
-    <tr>
-      <td>Email:</td>
-      <td><input type="password" name="signup[email]"</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><input class="submit" type="submit" value="Submit"</td>
-    </tr>
-  </table>
-
+<% if session[:user_id] %>
+<%= erb :chat %>
+<% end %>
