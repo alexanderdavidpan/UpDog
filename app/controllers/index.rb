@@ -9,8 +9,13 @@ get '/login' do
 end
 
 get '/signup' do
-
   erb :signup
+end
+
+post '/signup' do
+  @user = User.create(params[:signup])
+  session[:user_id] = @user.id
+  redirect '/'
 end
 
 get '/logout' do
