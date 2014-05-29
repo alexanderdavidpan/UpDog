@@ -3,6 +3,16 @@ get '/' do
   erb :index
 end
 
+get '/signup' do
+  erb :signup
+end
+
+post '/signup' do
+  @user = User.create(params[:signup])
+  session[:user_id] = @user.id
+  redirect '/'
+end
+
 get '/login' do
 
   erb :login
@@ -19,14 +29,9 @@ post '/login' do
   redirect '/'
 end
 
-get '/signup' do
-  erb :signup
-end
-
-post '/signup' do
-  @user = User.create(params[:signup])
-  session[:user_id] = @user.id
-  redirect '/'
+get '/user/:user_id' do
+  @user = User.find(params[:user_id])
+  erb :profile
 end
 
 get '/logout' do
