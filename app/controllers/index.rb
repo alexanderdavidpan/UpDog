@@ -11,7 +11,7 @@ end
 post '/login' do
   p params
   @user = User.find_by_username(params[:login][:username])
-  if @user.password_hash == params[:login][:password_hash]
+  if @user.password == params[:login][:password_hash]
     session[:user_id] = @user.id
   else
     session[:message] = "Login failed"
@@ -24,7 +24,10 @@ get '/signup' do
 end
 
 post '/signup' do
-  @user = User.create(params[:signup])
+  p params
+  @user = User.new(params[:signup])
+  @user.password = params[:signup][:password_hash]
+  @user.save!
   session[:user_id] = @user.id
   redirect '/'
 end

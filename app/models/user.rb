@@ -1,4 +1,5 @@
 require_relative "friendship"
+require 'bcrypt'
 
 class User < ActiveRecord::Base
   # Remember to create a migration!
@@ -15,5 +16,17 @@ class User < ActiveRecord::Base
       friends << User.find(friendship.friend_one_id)
     end
     friends
+  end
+
+  # users.password_hash in the database is a :string
+  include BCrypt
+
+  def password
+    @password ||= Password.new(password_hash)
+  end
+
+  def password=(new_password)
+    @password = Password.create(new_password)
+    self.password_hash = @password
   end
 end
