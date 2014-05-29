@@ -18,3 +18,21 @@ nav ul li a{
 nav{
   float: right;
 }
+#chat_ui div{
+  display: inline-block;
+}
+#friends_list{
+  border: 2px solid black;
+  width: 100px;
+}
+#chat_window{
+  border: 2px solid black;
+  height: 130px;
+  width: 400px;
+}
+.user1 {
+  float: left;
+}
+.user2 {
+  float: right;
+}
