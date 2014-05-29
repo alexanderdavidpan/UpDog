@@ -36,3 +36,85 @@ nav{
 .user2 {
   float: right;
 }
+.bubbleleft
+{
+position: relative;
+width: 200px;
+height: 35px;
+padding: 0px;
+background: #FFFFFF;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+border: #7FBECF solid 7px;
+}
+
+.bubbleleft:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 8px 20px 8px 0;
+border-color: transparent #FFFFFF;
+display: block;
+width: 0;
+z-index: 1;
+left: -20px;
+top: 9px;
+}
+
+.bubbleleft:before
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 14px 26px 14px 0;
+border-color: transparent #7FBECF;
+display: block;
+width: 0;
+z-index: 0;
+left: -33px;
+top: 3px;
+}
+
+.bubbleright
+{
+position: relative;
+width: 200px;
+height: 35px;
+padding: 0px;
+background: #FFFFFF;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+border: #7FBECF solid 7px;
+float: right;
+}
+
+.bubbleright:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 8px 0 8px 20px;
+border-color: transparent #FFFFFF;
+display: block;
+width: 0;
+z-index: 1;
+right: -20px;
+top: 9px;
+}
+
+.bubbleright:before
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 14px 0 14px 26px;
+border-color: transparent #7FBECF;
+display: block;
+width: 0;
+z-index: 0;
+right: -33px;
+top: 3px;
+}
