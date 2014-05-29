@@ -9,9 +9,12 @@ th {
 }
 nav ul li{
   display: inline-block;
-  float: right;
+  float: left;
 }
 nav ul li a{
   text-decoration: none;
   margin: 0 10px;
+}
+nav{
+  float: right;
 }
