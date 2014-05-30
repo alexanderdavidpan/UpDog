@@ -1,8 +1,10 @@
 <h1>UpDog</h1>
 
-<p>What's UpDog?</p>
-<p>An online chat program.<p>
 
 <% if session[:user_id] %>
 <%= erb :chat %>
+<% else %>
+<p>What's UpDog?</p>
+<p>An online chat program.<p>
+<p>Login or Signup to start chatting!<p>
 <% end %>

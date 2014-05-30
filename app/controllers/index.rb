@@ -44,6 +44,7 @@ post '/signup' do
 end
 
 get '/user/:user_id' do
+  @users = User.all
   @user = User.find(params[:user_id])
   erb :profile
 end

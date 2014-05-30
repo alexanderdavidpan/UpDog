@@ -30,17 +30,21 @@ nav{
   list-style-type: none;
   margin-left: 10px;
   text-align: left;
+  width: 125px;
 }
 #friends_list h4 {
   margin-left: 10px;
 }
 #friends_list div:hover {
-  color:red;
+  color: red;
 }
 #chat_window{
   border: 2px solid black;
-  height: 130px;
-  width: 400px;
+  height: 400px;
+  width: 450px;
+}
+#message_box{
+  width: 500px;
 }
 .user1 {
   float: left;
