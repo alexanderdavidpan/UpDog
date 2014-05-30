@@ -12,4 +12,10 @@ $(document).ready(function() {
       window.location.href = '/'
     });
   });
+
+  $('#message_box').keydown(function(e) {
+    if (e.keyCode == 13) {
+      console.log('enter')
+    }
+  });
 });
