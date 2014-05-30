@@ -8,11 +8,12 @@ get '/signup' do
   erb :signup
 end
 
-post '/signup' do
-  @user = User.create(params[:signup])
-  session[:user_id] = @user.id
-  redirect '/'
-end
+# post '/signup' do
+#   @user = User.create(params[:signup])
+#   session[:user_id] = @user.id
+#   session[:username] = @user.username
+#   redirect '/'
+# end
 
 get '/login' do
 
@@ -24,6 +25,7 @@ post '/login' do
   @user = User.find_by_username(params[:login][:username])
   if @user.password == params[:login][:password_hash]
     session[:user_id] = @user.id
+    session[:username] = @user.username
   else
     session[:message] = "Login failed"
   end
@@ -40,6 +42,7 @@ post '/signup' do
   @user.password = params[:signup][:password_hash]
   @user.save!
   session[:user_id] = @user.id
+  session[:username] = @user.username
   redirect '/'
 end
 

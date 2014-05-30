@@ -23,7 +23,7 @@
 
     <ul>
         <% if session[:user_id] %>
-        <li><a href="/user/<%=session[:user_id]%>">Profile</a>
+        <li><a class="username" href="/user/<%=session[:user_id]%>"><%=session[:username]%></a>
         <li><a href="/logout" id="logout">Logout</a></li>
         <% else %>
         <li><a href="/signup" id="signup">Signup</a></li>
