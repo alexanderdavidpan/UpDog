@@ -13,9 +13,14 @@ $(document).ready(function() {
     });
   });
 
+  $('#friends_list div').dblclick(function(){
+    console.log('clickity')
+  });
+
   $('#message_box').keydown(function(e) {
     if (e.keyCode == 13) {
       console.log('enter')
     }
   });
+
 });
