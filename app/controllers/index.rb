@@ -8,12 +8,15 @@ get '/signup' do
   erb :signup
 end
 
-# post '/signup' do
-#   @user = User.create(params[:signup])
-#   session[:user_id] = @user.id
-#   session[:username] = @user.username
-#   redirect '/'
-# end
+post '/signup' do
+  p params
+  @user = User.new(params[:signup])
+  @user.password = params[:signup][:password_hash]
+  @user.save!
+  session[:user_id] = @user.id
+  session[:username] = @user.username
+  redirect '/'
+end
 
 get '/login' do
 
@@ -36,15 +39,6 @@ get '/signup' do
   erb :signup
 end
 
-post '/signup' do
-  p params
-  @user = User.new(params[:signup])
-  @user.password = params[:signup][:password_hash]
-  @user.save!
-  session[:user_id] = @user.id
-  session[:username] = @user.username
-  redirect '/'
-end
 
 get '/user/:user_id' do
   @users = User.all
