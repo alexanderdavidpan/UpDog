@@ -15,6 +15,8 @@ $(document).ready(function() {
 
   $('#friends_list div').dblclick(function(){
     console.log('double clicked')
+    $('#friends_list div').removeClass("current_friend")
+    $(this).addClass("current_friend")
   });
 
   $('#message_box').keydown(function(e) {

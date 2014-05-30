@@ -28,15 +28,24 @@ nav{
 #friends_list div{
   display: list-item;
   list-style-type: none;
-  margin-left: 10px;
+  padding-left: 10px;
   text-align: left;
   width: 90px;
+
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
 }
 #friends_list h4 {
   margin-left: 10px;
 }
 #friends_list div:hover {
-  color: red;
+  color: red
+}
+.current_friend {
+  color: white !important;
+  background-color: gray;
 }
 #chat_window{
   border: 2px solid black;
