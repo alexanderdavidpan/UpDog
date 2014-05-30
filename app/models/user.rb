@@ -2,6 +2,9 @@ require_relative "friendship"
 require 'bcrypt'
 
 class User < ActiveRecord::Base
+  validates :username, uniqueness: true
+  validates :username, length: { maximum: 16 }
+
   # Remember to create a migration!
   has_many :messages
   has_many :friendships
