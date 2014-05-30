@@ -34,6 +34,9 @@ nav{
 #friends_list h4 {
   margin-left: 10px;
 }
+#friends_list div:hover {
+  color:red;
+}
 #chat_window{
   border: 2px solid black;
   height: 130px;

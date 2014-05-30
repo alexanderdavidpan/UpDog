@@ -1,6 +1,6 @@
 <h2>Chat</h2>
 <div id="chat_ui">
-  <div id="friends_list">
+  <div id="friends_list" style="overflow-y: scroll; height:400px;">
     <h4>Friends</h4>
     <hr>
     <% @users.each do |user| %>
@@ -10,5 +10,9 @@
   <div id="chat_window">
     <p class="user1">Hi!</p>
     <p class="user2">Hey!</p>
+  </div>
+
+  <div class="user_input">
+    <input type="textarea" name="message"></input>
   </div>
 </div>
