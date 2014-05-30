@@ -14,7 +14,7 @@ $(document).ready(function() {
   });
 
   $('#friends_list div').dblclick(function(){
-    
+    console.log('double clicked')
   });
 
   $('#message_box').keydown(function(e) {
@@ -22,6 +22,7 @@ $(document).ready(function() {
       var message = $('#message_box').val();
       var username = $('a.username').text();
       $('#chat_window').append('\n<p>' + username + ': ' + message + '</p>');
+      $('#chat_window').animate({scrollTop: $('#chat_window').prop("scrollHeight")}, 500);
       $('#message_box').val('')
     }
   });
@@ -30,7 +31,8 @@ $(document).ready(function() {
     var message = $('#message_box').val();
     var username = $('a.username').text();
     $('#chat_window').append('\n<p>' + message + '</p>');
-    $('#message_box').val('')
+    $('#chat_window').animate({scrollTop: $('#chat_window').prop("scrollHeight")}, 500);
+    $('#message_box').val('');
   });
 
 });
