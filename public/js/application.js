@@ -14,14 +14,14 @@ $(document).ready(function() {
   });
 
   $('#friends_list div').dblclick(function(){
-    console.log('clickity')
+    
   });
 
   $('#message_box').keydown(function(e) {
     if (e.keyCode == 13) {
       console.log('enter');
-      var message = $('#message_box').serialize();
-      console.log(message);
+      var message = $('#message_box').val();
+      $('#chat_window').append('\n<p>' + message + '</p>');
     }
   });
 
