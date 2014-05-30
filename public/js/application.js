@@ -22,7 +22,15 @@ $(document).ready(function() {
       console.log('enter');
       var message = $('#message_box').val();
       $('#chat_window').append('\n<p>' + message + '</p>');
+      $('#message_box').val('')
+      
     }
+  });
+
+  $('#message_submit').click(function(e) {
+    var message = $('#message_box').val();
+    $('#chat_window').append('\n<p>' + message + '</p>');
+    $('#message_box').val('')
   });
 
 });

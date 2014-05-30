@@ -42,7 +42,9 @@ nav{
   border: 2px solid black;
   height: 400px;
   width: 450px;
-  
+}
+#chat_window p{
+  margin-left: 10px;
 }
 #message_box{
   width: 500px;
