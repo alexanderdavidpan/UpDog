@@ -24,6 +24,7 @@ nav{
 #friends_list{
   border: 2px solid black;
   width: 100px;
+  overflow-x: hidden;
 }
 #friends_list div{
   display: list-item;
