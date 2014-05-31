@@ -69,6 +69,10 @@ nav{
 .user2 {
   float: right;
 }
+#updog_logo {
+  color: gray;
+  text-decoration: none;
+}
 .bubbleleft
 {
 position: relative;
