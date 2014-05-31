@@ -26,23 +26,24 @@ $(document).ready(function() {
     $('#message_box').trigger('click');
   });
 
+  function submitMessage(message, username) {
+    $('#chat_window').append('\n<p>' + username + ': ' + message + '</p>');
+    $('#chat_window').animate({scrollTop: $('#chat_window').prop("scrollHeight")}, 500);
+    $('#message_box').val('')
+  }
+
   $('#message_box').keydown(function(e) {
     if (e.keyCode == 13) {
       var message = $('#message_box').val();
       var username = $('a.username').text();
-      $('#chat_window').append('\n<p>' + username + ': ' + message + '</p>');
-      $('#chat_window').animate({scrollTop: $('#chat_window').prop("scrollHeight")}, 500);
-      $('#message_box').val('')
+      submitMessage(message, username);
     }
   });
 
   $('#submit_message').click(function(e) {
-    console.log('clicked submit')
     var message = $('#message_box').val();
     var username = $('a.username').text();
-    $('#chat_window').append('\n<p>' + username + ': ' + message + '</p>');
-    $('#chat_window').animate({scrollTop: $('#chat_window').prop("scrollHeight")}, 500);
-    $('#message_box').val('')
+    submitMessage(message, username);
   });
 
 });
