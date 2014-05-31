@@ -36,12 +36,13 @@ $(document).ready(function() {
     }
   });
 
-  $('#message_submit').click(function(e) {
+  $('#submit_message').click(function(e) {
+    console.log('clicked submit')
     var message = $('#message_box').val();
     var username = $('a.username').text();
-    $('#chat_window').append('\n<p>' + message + '</p>');
+    $('#chat_window').append('\n<p>' + username + ': ' + message + '</p>');
     $('#chat_window').animate({scrollTop: $('#chat_window').prop("scrollHeight")}, 500);
-    $('#message_box').val('');
+    $('#message_box').val('')
   });
 
 });
