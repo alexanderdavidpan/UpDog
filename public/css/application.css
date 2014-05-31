@@ -4,6 +4,11 @@
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
+a {
+  color: #4682B4;
+  font-weight: bold;
+  text-decoration: none;
+}
 th {
   text-align: left;
 }
@@ -12,7 +17,6 @@ nav ul li{
   float: left;
 }
 nav ul li a{
-  text-decoration: none;
   margin: 0 10px;
 }
 nav{
@@ -39,7 +43,7 @@ nav{
 
 }
 #friends_list h4 {
-  margin-left: 10px;
+  text-align: center;
 }
 #friends_list div:hover {
   color: red
@@ -57,7 +61,6 @@ nav{
   margin-left: 10px;
 }
 #chat_window h3{
-  margin-left: 10px;
   text-align: center;
 }
 #message_box{
@@ -71,10 +74,5 @@ nav{
 }
 #updog_logo {
   color: #4682B4;
-  text-decoration: none;
-}
-a {
-  color: #4682B4;
-  font-weight: bold;
   text-decoration: none;
 }
