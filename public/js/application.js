@@ -17,6 +17,9 @@ $(document).ready(function() {
     console.log('double clicked')
     $('#friends_list div').removeClass("current_friend")
     $(this).addClass("current_friend")
+    var friend = $(this).html()
+    $('#chat_window').empty();
+    $('#chat_window').append('<h3>' + friend + '</h3><hr>')
   });
 
   $('#message_box').keydown(function(e) {

@@ -39,7 +39,6 @@ get '/signup' do
   erb :signup
 end
 
-
 get '/user/:user_id' do
   @users = User.all
   @user = User.find(params[:user_id])
@@ -50,3 +49,5 @@ get '/logout' do
   session.clear
   redirect '/'
 end
+
+
