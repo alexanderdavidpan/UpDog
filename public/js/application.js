@@ -20,6 +20,13 @@ $(document).ready(function() {
     var friend = $(this).html()
     $('#chat_window').empty();
     $('#chat_window').append('<h3>' + friend + '</h3><hr>')
+    $('#message_box').focus();
+
+    $('#message_box').select();
+
+    $('#message_box').trigger('focus');
+
+    $('#message_box').trigger('click');
   });
 
   $('#message_box').keydown(function(e) {
