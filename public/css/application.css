@@ -70,6 +70,11 @@ nav{
   float: right;
 }
 #updog_logo {
-  color: gray;
+  color: #4682B4;
+  text-decoration: none;
+}
+a {
+  color: #4682B4;
+  font-weight: bold;
   text-decoration: none;
 }
