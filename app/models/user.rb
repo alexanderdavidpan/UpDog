@@ -4,6 +4,7 @@ require 'bcrypt'
 class User < ActiveRecord::Base
   validates :username, uniqueness: true
   validates :username, length: { maximum: 16 }
+  validates :email, uniqueness: true
 
   # Remember to create a migration!
   has_many :messages
