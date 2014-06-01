@@ -58,7 +58,8 @@ nav{
   width: 450px;
 }
 #chat_window p{
-  margin-left: 10px;
+  margin: 0 10px;
+  word-wrap: break-word;
 }
 #chat_window h3{
   text-align: center;
